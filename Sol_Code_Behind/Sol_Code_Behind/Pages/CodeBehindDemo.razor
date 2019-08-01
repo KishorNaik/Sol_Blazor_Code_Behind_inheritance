@@ -1,0 +1,20 @@
+﻿@page "/codebehind"
+
+@inherits Sol_Code_Behind.Base.CodeBehindDemoBase
+
+<h2>Code Behind</h2>
+
+<h3>@base.Message</h3>
+
+<button onclick="@base.FromCodeBeind" class="btn btn-primary">Submit - Code Behind</button>
+
+<button onclick="@this.FromFunctionDirective" class="btn btn-secondary">Submit - Function Directive</button>
+
+@functions {
+
+    public void FromFunctionDirective()
+    {
+        base.Message = "Hello from Function Directive";
+    }
+
+}
